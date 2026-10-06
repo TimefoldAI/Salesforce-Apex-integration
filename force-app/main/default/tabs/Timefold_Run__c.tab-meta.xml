@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- So a run is visible without knowing SOQL. Find it through the App
+     Launcher: search "Timefold Runs". -->
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customObject>true</customObject>
+    <motif>Custom53: Bell</motif>
+</CustomTab>

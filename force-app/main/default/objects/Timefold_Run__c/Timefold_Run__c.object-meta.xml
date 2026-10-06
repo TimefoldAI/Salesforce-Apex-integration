@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- One row per optimisation run.
+
+     Nothing keeps memory between transactions, so a run is a record: it
+     survives, it is visible in a list view, and a queueable that wakes up two
+     minutes later can find out what it was doing. -->
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Timefold Run</label>
+    <pluralLabel>Timefold Runs</pluralLabel>
+    <nameField>
+        <label>Run Number</label>
+        <type>AutoNumber</type>
+        <displayFormat>TFR-{0000}</displayFormat>
+    </nameField>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>ReadWrite</sharingModel>
+    <enableActivities>false</enableActivities>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableFeeds>false</enableFeeds>
+    <description>An optimisation run: what was sent to Timefold, what came back, and what was written to Salesforce.</description>
+</CustomObject>

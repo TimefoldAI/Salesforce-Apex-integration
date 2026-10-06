@@ -1,0 +1,12 @@
+{
+  "orgName": "Timefold x Salesforce, in Apex",
+  "edition": "Developer",
+  "features": [
+    "FieldService:25"
+  ],
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    }
+  }
+}

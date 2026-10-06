@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Lets a User back a ServiceResource.
+
+     Salesforce refuses the insert without the Field Service Standard user
+     permission - "Looks like the selected user doesn't have permission to be a
+     service resource. Your Salesforce admin can help with that." - which names
+     no field, no permission and no licence.
+
+     The permission also needs the FieldServiceStandardPsl permission set
+     licence, and one without the other does nothing. TimefoldSeed.
+     ensureDemoUsers assigns both, to the demo staff and to nobody else.
+
+     A Standard Platform User cannot be a service resource until it holds both.
+     The admin's own Salesforce-licence profile already can. -->
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Timefold Demo Staff</label>
+    <description>Lets a User back a ServiceResource: the Field Service Standard user permission, which Salesforce also requires the FieldServiceStandardPsl licence for. Assigned to the demo staff only, by TimefoldSeed.ensureDemoUsers.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>FieldServiceAccess</name>
+    </userPermissions>
+</PermissionSet>

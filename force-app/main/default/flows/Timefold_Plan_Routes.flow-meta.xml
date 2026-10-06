@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- What the "Plan Routes (Timefold, Apex)" action runs.
+
+     Identical in shape to Timefold_Plan_Roster, with one input changed: the
+     model. Everything downstream - the extract, the request, the write-back -
+     branches on that one string in TimefoldJob.
+
+     Two steps: call the Apex that starts the run, then show what came back.
+     No confirmation screen: Salesforce runs a global action's flow in the
+     docked composer at the bottom right, and that panel renders a screen's
+     Finish button but not its Next, so a screen asking the reader to confirm
+     would show them a question and nothing to press. Picking an action out of
+     a menu is deliberate enough.
+
+     It reports that the run started, not that it finished. The solve is
+     asynchronous because it has to be: a callout cannot outlive 120 seconds
+     and Apex cannot wait. The Timefold Run record carries the rest. -->
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <actionCalls>
+        <name>Start_the_run</name>
+        <label>Start the run</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <actionName>TimefoldPlanner</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Show_the_answer</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>model</name>
+            <value>
+                <stringValue>Routes</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>TimefoldPlanner</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <environments>Default</environments>
+    <interviewLabel>Plan Routes with Timefold (Apex) {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Plan Routes with Timefold (Apex)</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Show_the_answer</name>
+        <label>Plan Routes with Timefold (Apex)</label>
+        <locationX>176</locationX>
+        <locationY>278</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Answer</name>
+            <fieldText>&lt;p&gt;{!Start_the_run.message}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Start_the_run</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+</Flow>

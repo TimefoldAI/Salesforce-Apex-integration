@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Plan_Signature__c</fullName>
+    <label>Plan Signature</label>
+    <type>LongTextArea</type>
+    <length>131072</length>
+    <visibleLines>6</visibleLines>
+    <description>Routing runs only. One line per placement this run decided: appointment id, engineer id, start time in whole minutes since the epoch - Salesforce stores SchedStartTime to the minute, so comparing seconds never matches. This is how the next run tells a manual assignment from an automatic one - a scheduled appointment that is not in here was put there by a person, so it gets pinned instead of moved. Pinned visits are deliberately absent, because they were a person's decision and not this run's.</description>
+</CustomField>

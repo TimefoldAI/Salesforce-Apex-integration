@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- A global action, deliberately not one on a Work Order.
+
+     A round is not a property of a record. Routing covers every appointment in
+     the window across the whole region, and it moves them between engineers: a
+     button on one Work Order reads as "schedule this job" and does something
+     much larger. That was the same conclusion the Odoo integration reached.
+
+     Global actions live in the + menu in the Salesforce header, are visible
+     from every page, and need nothing selected. -->
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flowDefinition>Timefold_Plan_Routes</flowDefinition>
+    <label>Plan Routes (Timefold, Apex)</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

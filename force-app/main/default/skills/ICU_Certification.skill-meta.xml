@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Certified to work in intensive care. -->
+<Skill xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Certified to work in intensive care.</description>
+    <label>ICU Certification</label>
+</Skill>

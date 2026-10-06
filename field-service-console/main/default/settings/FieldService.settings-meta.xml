@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The setting that makes the console's MAP tab exist.
+
+     Setup > Field Service Settings > "Send geolocation and map data to Google
+     and Apple". Off by default, and with it off the Dispatcher Console shows
+     GANTT and no MAP tab, without an error.
+
+     It lives here rather than in field-service/ for two reasons. It is only
+     of use with the managed package - the map is the package's - and this
+     directory is the one setup.sh deploys once it has confirmed the package
+     is there. And field-service/ is deployed only on an org where Field
+     Service was off, so a setting placed there would never reach an org that
+     already had it on.
+
+     What it does is what it says: Field Service may send addresses and
+     coordinates to Google and Apple to draw maps and geocode. That is how
+     the map is drawn at all. An org where that is not acceptable should not
+     have this on, and will not have the map. -->
+<FieldServiceSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canPopulateGoogleAddress>true</canPopulateGoogleAddress>
+</FieldServiceSettings>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The rules that have no Salesforce home.
+     Almost every rule in this integration comes out of Salesforce data:
+     certificates from ServiceResourceSkill, wards from ServiceTerritoryMember,
+     leave from ResourceAbsence, contract hours from ServiceResourceCapacity.
+     What is left over is labour policy and solver trade-offs, which Salesforce
+     has no object for. They are records so that an administrator can change
+     them in a list view without a redeployment.
+     Every row carries its own reasoning in Notes, so the "why" is visible to
+     whoever changes the number. -->
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Timefold Setting</label>
+    <pluralLabel>Timefold Settings</pluralLabel>
+    <description>Labour rules and solver weights. TimefoldRules falls back to a built-in default for anything missing, so the integration works before these are seeded.</description>
+    <nameField>
+        <label>Key</label>
+        <type>Text</type>
+    </nameField>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>ReadWrite</sharingModel>
+    <enableActivities>false</enableActivities>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableFeeds>false</enableFeeds>
+</CustomObject>

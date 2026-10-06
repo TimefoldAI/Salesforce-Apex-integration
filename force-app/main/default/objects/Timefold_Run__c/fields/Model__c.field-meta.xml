@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Model__c</fullName>
+    <label>Model</label>
+    <type>Picklist</type>
+    <required>true</required>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value><fullName>Roster</fullName><default>true</default><label>Roster (Employee Shift Scheduling)</label></value>
+            <value><fullName>Routes</fullName><default>false</default><label>Routes (Field Service Routing)</label></value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timefold_Job_Id__c</fullName>
+    <label>Timefold Job Id</label>
+    <type>Text</type>
+    <length>80</length>
+    <externalId>true</externalId>
+    <description>The id Timefold gave this run. Use it to find the run in the Timefold console.</description>
+</CustomField>

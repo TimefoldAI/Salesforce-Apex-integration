@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Notes__c</fullName>
+    <label>Notes</label>
+    <type>LongTextArea</type>
+    <length>4000</length>
+    <visibleLines>3</visibleLines>
+    <description>Why this value is what it is. Changing a number without reading this is how a rule quietly stops meaning anything.</description>
+</CustomField>

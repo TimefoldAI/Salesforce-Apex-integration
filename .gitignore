@@ -1,0 +1,20 @@
+# Salesforce CLI state, per-checkout and not shareable.
+.sf/
+.sfdx/
+.localdevserver/
+
+# Deployment and test output.
+*.log
+deploy-*.json
+
+# Local environment. .env holds the Timefold API key; .env.example shows its shape.
+.env
+.envrc
+
+# Editor and OS noise.
+.DS_Store
+.idea/
+.vscode/
+
+# scratch-org.sh writes this while it switches Field Service off, then removes it
+.field-service-off/

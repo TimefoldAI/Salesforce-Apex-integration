@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Travel_Distance_Km__c</fullName>
+    <label>Travel Distance (km)</label>
+    <type>Number</type>
+    <precision>10</precision>
+    <scale>1</scale>
+    <description>Routing runs only. Total driving distance of the whole plan, from the run's KPIs.</description>
+</CustomField>

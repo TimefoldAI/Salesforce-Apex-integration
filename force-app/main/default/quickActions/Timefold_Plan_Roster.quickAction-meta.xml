@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- A global action, deliberately not one on an object.
+
+     A schedule is not a property of a record: optimising covers the whole rota
+     across every ward. A button on one Shift reads as "optimise this shift"
+     and does something much larger, which is the wrong promise to make.
+
+     Global actions live in the + menu in the Salesforce header, are visible
+     from every page, and need nothing selected. -->
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flowDefinition>Timefold_Plan_Roster</flowDefinition>
+    <label>Plan Roster (Timefold, Apex)</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

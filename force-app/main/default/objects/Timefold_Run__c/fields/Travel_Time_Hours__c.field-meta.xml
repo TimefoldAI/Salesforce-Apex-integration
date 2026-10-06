@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Travel_Time_Hours__c</fullName>
+    <label>Travel Time (h)</label>
+    <type>Number</type>
+    <precision>8</precision>
+    <scale>2</scale>
+    <description>Routing runs only. Total driving time of the whole plan, from the run's KPIs. Real road time: the model uses the Timefold Platform maps service, which defaults to OSRM.</description>
+</CustomField>

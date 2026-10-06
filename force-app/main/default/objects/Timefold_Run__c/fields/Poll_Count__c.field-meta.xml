@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Poll_Count__c</fullName>
+    <label>Poll Count</label>
+    <type>Number</type>
+    <precision>4</precision>
+    <scale>0</scale>
+    <description>How many times the queueable came back to look.</description>
+</CustomField>

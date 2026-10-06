@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Score__c</fullName>
+    <label>Score</label>
+    <type>Text</type>
+    <length>120</length>
+    <description>Hard/medium/soft. Anything other than 0hard/0medium means a rule was broken.</description>
+</CustomField>
